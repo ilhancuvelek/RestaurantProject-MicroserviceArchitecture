@@ -9,9 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 //Configure ProductService and HttpClient in Startup ***
 builder.Services.AddHttpClient<IProductService, ProductService>();
-
+builder.Services.AddHttpClient<ICartService, CartService>();
 SD.ProductAPIBase = builder.Configuration["ServiceUrls:ProductAPI"];
-
+SD.ShoppingCartAPIBase = builder.Configuration["ServiceUrls:ShoppingCartAPI"];
+builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 //Configure ProductService and HttpClient in Startup --end ***
 

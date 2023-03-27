@@ -1,16 +1,16 @@
-﻿using Mango.Services.ShoppingCartAPI.Models.Dtos;
+﻿using Mango.Services.ShoppingCartAPI.Models.Dto;
 using Mango.Services.ShoppingCartAPI.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Mango.Services.ShoppingCartAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/cart")]
     [ApiController]
     public class CartAPIController : ControllerBase
     {
         private readonly ICartRepository _cartRepository;
-       
+
         protected ResponseDto _response;
         public CartAPIController(ICartRepository cartRepository)
         {
