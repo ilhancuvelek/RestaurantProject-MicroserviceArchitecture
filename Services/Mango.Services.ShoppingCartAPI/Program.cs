@@ -1,4 +1,5 @@
 using AutoMapper;
+using Mango.MessageBus;
 using Mango.Services.ShoppingCartAPI;
 using Mango.Services.ShoppingCartAPI.DbContexts;
 using Mango.Services.ShoppingCartAPI.Repository;
@@ -61,6 +62,9 @@ builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<ICartRepository, CartRepository>();
+
+//AZURE SERVÝCE BUS
+builder.Services.AddSingleton<IMessageBus, AzureServiceBusMessageBus>();
 
 //Identity server config **
 builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
