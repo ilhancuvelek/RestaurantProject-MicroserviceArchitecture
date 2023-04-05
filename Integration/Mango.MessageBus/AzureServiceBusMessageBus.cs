@@ -11,7 +11,7 @@ namespace Mango.MessageBus
 {
     public class AzureServiceBusMessageBus : IMessageBus
     {
-        private string connectionString = "Endpoint=sb://mangorestaurant12345.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=HBobJj1n2NygpESYvVdImzUXbDVFt2J3d+ASbGf8ABU=";
+        private string connectionString = "Endpoint=sb://mangorestaurant12345.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=6IIxKhKWA28wv7g6XthvIU6qC/QVSrvaY+ASbBl6+qY=";
         public async Task PublishMessage(BaseMessage message, string topicName)
         {
 

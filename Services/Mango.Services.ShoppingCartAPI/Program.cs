@@ -62,9 +62,14 @@ builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<ICartRepository, CartRepository>();
+builder.Services.AddScoped<ICouponRepository, CouponRepository>();
 
 //AZURE SERVÝCE BUS
 builder.Services.AddSingleton<IMessageBus, AzureServiceBusMessageBus>();
+
+//CUOPON SERVÝCE HTTP CLÝENT
+builder.Services.AddHttpClient<ICouponRepository, CouponRepository>(u => u.BaseAddress =
+              new Uri(builder.Configuration["ServiceUrls:CouponAPI"]));
 
 //Identity server config **
 builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
