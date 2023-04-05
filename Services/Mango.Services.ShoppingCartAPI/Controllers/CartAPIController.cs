@@ -129,7 +129,7 @@ namespace Mango.Services.ShoppingCartAPI.Controllers
                 checkoutHeader.CartDetails = cartDto.CartDetails;
 
                 //logic to add message to process order.*** AZURE SERVİCE BUS***
-                await _messageBus.PublishMessage(checkoutHeader, "");
+                await _messageBus.PublishMessage(checkoutHeader, "checkoutmessagetopic");
 
             }
             catch (Exception ex)

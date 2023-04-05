@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.Services.CouponAPI", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{D3A9C8B6-FE47-4B38-8A82-90F771CBB7B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.MessageBus", "Integration\Mango.MessageBus\Mango.MessageBus.csproj", "{43507C6A-882E-41EB-80CF-ADB4DFF18337}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.MessageBus", "Integration\Mango.MessageBus\Mango.MessageBus.csproj", "{43507C6A-882E-41EB-80CF-ADB4DFF18337}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.OrderAPI", "Services\Mango.Services.OrderAPI\Mango.Services.OrderAPI.csproj", "{563B82AE-E1EB-4EFA-A9E1-9F5C19FE0AD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{43507C6A-882E-41EB-80CF-ADB4DFF18337}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43507C6A-882E-41EB-80CF-ADB4DFF18337}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43507C6A-882E-41EB-80CF-ADB4DFF18337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{563B82AE-E1EB-4EFA-A9E1-9F5C19FE0AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{563B82AE-E1EB-4EFA-A9E1-9F5C19FE0AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{563B82AE-E1EB-4EFA-A9E1-9F5C19FE0AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{563B82AE-E1EB-4EFA-A9E1-9F5C19FE0AD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{5136B3EA-C350-4C63-9641-266182EB940A} = {0E26A069-5028-4697-9FBB-120757629CFF}
 		{357F9F74-0BFC-4537-8FDC-560C98569AA3} = {0E26A069-5028-4697-9FBB-120757629CFF}
 		{43507C6A-882E-41EB-80CF-ADB4DFF18337} = {D3A9C8B6-FE47-4B38-8A82-90F771CBB7B4}
+		{563B82AE-E1EB-4EFA-A9E1-9F5C19FE0AD7} = {0E26A069-5028-4697-9FBB-120757629CFF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC242F6A-2673-411B-8531-38428FF94B70}
