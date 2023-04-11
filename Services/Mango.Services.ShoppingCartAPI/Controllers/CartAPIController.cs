@@ -147,6 +147,7 @@ namespace Mango.Services.ShoppingCartAPI.Controllers
                 //logic to add message to process order.*** AZURE SERVİCE BUS***
                 await _messageBus.PublishMessage(checkoutHeader, "checkoutmessagetopic");
 
+                await _cartRepository.ClearCart(checkoutHeader.UserId);
             }
             catch (Exception ex)
             {
